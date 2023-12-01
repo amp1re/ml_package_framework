@@ -3,11 +3,9 @@
 """Tests for `ml_package_framework` package."""
 
 import pytest
-
 from click.testing import CliRunner
 
-from ml_package_framework import ml_package_framework
-from ml_package_framework import cli
+from ml_package_framework import cli, ml_package_framework
 
 
 @pytest.fixture

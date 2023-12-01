@@ -1,5 +1,6 @@
 """Console script for ml_package_framework."""
 import sys
+
 import click
 
 
