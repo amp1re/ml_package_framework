@@ -9,10 +9,11 @@ class DataProcessor(ABC):
     """
 
     @abstractmethod
-    def load_data(self, *args, **kwargs):
+    def load_data(self, path, *args, **kwargs):
         """
         Load data from a source.
 
+        :param path: A string representing the file path.
         :param args: Positional arguments passed to the data loading method.
         :param kwargs: Keyword arguments passed to the data loading method.
         :return: Loaded data.

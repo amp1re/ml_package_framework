@@ -10,13 +10,8 @@ with open("README.rst", encoding="utf-8") as readme_file:
 with open("HISTORY.rst", encoding="utf-8") as history_file:
     history = history_file.read()
 
-requirements = [
-    "Click>=7.0",
-]
-
-test_requirements = [
-    "pytest>=3",
-]
+with open("requirements.txt", encoding="utf-8") as requirements_file:
+    requirements = test_requirements = requirements_file.read().splitlines()
 
 setup(
     author="Nikita Toloknov",
