@@ -9,7 +9,7 @@ class DataProcessor(ABC):
     """
 
     @abstractmethod
-    def load_data(self, path, *args, **kwargs):
+    def load_data(self, path: str, *args, **kwargs):
         """
         Load data from a source.
 
