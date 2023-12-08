@@ -65,3 +65,48 @@ def test_load_data_with_temporary_file(sample_data):
         loaded_data = processor.load_data(dst_path)
 
         pd.testing.assert_frame_equal(loaded_data, sample_data)
+
+
+@pytest.fixture(name="data_processor_instance")
+def fixture_data_processor_instance():
+    """
+    Pytest fixture to create and return an instance of the data processor class.
+
+    Returns
+    -------
+    An instance of the data processor class.
+    """
+    instance = SberDataProcessor()
+    return instance
+
+
+def test_load_data_raises_error_with_unsupported_format(data_processor_instance):
+    """
+    Test that the `load_data` method of a data processor instance
+    raises a `ValueError` when an unsupported file format is provided.
+
+    This function tests the behavior of the `load_data` method in a scenario
+    where an unsupported file format (in this case, an Excel file with .xlsx extension) is passed
+    as an argument. The test ensures that the method raises a `ValueError` in response
+    to this unsupported file format.
+
+    Parameters
+    ----------
+    data_processor_instance : object
+        An instance of the data processor class whose `load_data` method is being tested.
+
+    Raises
+    ------
+    ValueError
+        This exception is expected to be raised when the `load_data` method is called
+         with an unsupported file format.
+
+    Notes
+    -----
+    - The test is designed to validate exception handling in the data processing class.
+    - It uses the pytest framework's `raises` context manager to check for the `ValueError`.
+    - The data file format used in this test is ".xlsx", which is assumed to be unsupported
+     by the `load_data` method.
+    """
+    with pytest.raises(ValueError):
+        _ = data_processor_instance.load_data("data.xlsx")
