@@ -8,7 +8,7 @@ from ml_package_framework.data_processing import SberDataProcessor
 
 
 @pytest.fixture(name="sample_data")
-def fixture_sample_data():
+def fixture_sample_data() -> pd.DataFrame:
     """
     Create a sample pandas DataFrame for use as a pytest fixture.
 
@@ -68,7 +68,7 @@ def test_load_data_with_temporary_file(sample_data):
 
 
 @pytest.fixture(name="data_processor_instance")
-def fixture_data_processor_instance():
+def fixture_data_processor_instance() -> SberDataProcessor:
     """
     Pytest fixture to create and return an instance of the data processor class.
 
