@@ -14,7 +14,7 @@ repos:
     rev: v3.0.1
     hooks:
       - id: pylint
-        additional_dependencies: [pylint]
+        additional_dependencies: [pylint, pandas, pytest]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.7.1
