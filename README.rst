@@ -4,7 +4,7 @@ ml_package_framework
 
 
 .. image:: https://img.shields.io/pypi/v/ml_package_framework.svg
-        :target: https://pypi.python.org/pypi/ml_package_framework
+        :target: https://test.pypi.org/project/ml-package-framework/
 
 .. image:: https://img.shields.io/travis/amp1re/ml_package_framework.svg
         :target: https://travis-ci.com/amp1re/ml_package_framework
