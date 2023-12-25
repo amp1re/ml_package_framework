@@ -110,3 +110,11 @@ def test_load_data_raises_error_with_unsupported_format(data_processor_instance)
     """
     with pytest.raises(ValueError):
         _ = data_processor_instance.load_data("data.xlsx")
+
+
+def test_input_not_dataframe(data_processor_instance):
+    """
+    Test to ensure that a ValueError is raised when the input is not a pandas DataFrame.
+    """
+    with pytest.raises(ValueError):
+        data_processor_instance.create_user_item_matrix(None)
