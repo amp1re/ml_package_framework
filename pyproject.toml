@@ -1,3 +1,27 @@
+[build-system]
+requires = ["flit_core>=3.4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "ml-package_framework"
+version = "0.3.0"
+authors = [
+  { name="Nikita Toloknov", email="4170407@gmail.com" },
+]
+description = "A machine learning package framework for data loading, preprocessing, model selection, and logging."
+readme = "README.rst"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/amp1re/ml_package_framework"
+Issues = "https://github.com/amp1re/ml_package_framework/issues"
+
+
 [tool.black]
 line-length = 88
 include = '\.pyi?$'
