@@ -173,7 +173,8 @@ class SberDataProcessor(DataProcessor):
         This method identifies the latest order for each user and splits the DataFrame into two:
         one DataFrame contains all data excluding
         the last order for each user, and the other includes
-        only the last order for each user. The first DataFrame aggregates the data at the user level.
+        only the last order for each user.
+        The first DataFrame aggregates the data at the user level.
 
         Parameters
         ----------
